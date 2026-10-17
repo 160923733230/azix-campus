@@ -1,0 +1,337 @@
+
+/* ==========================================
+   AZIX CAMPUS — Premium Authentication
+   Navy Blue | White | Indigo
+========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 20px;
+  color: #172554;
+  background:
+    radial-gradient(
+      ellipse at 12% 12%,
+      rgba(99, 102, 241, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 88% 88%,
+      rgba(79, 70, 229, 0.09),
+      transparent 32%
+    ),
+    #f6f8fc;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 490px;
+  padding: 38px 42px 30px;
+  border: 1px solid #e3e9f4;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow:
+    0 24px 70px rgba(30, 41, 91, 0.08),
+    0 3px 12px rgba(30, 41, 91, 0.025);
+  animation: authAppear 0.45s ease both;
+}
+
+@keyframes authAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back to Home */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 27px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #4f46e5;
+}
+
+/* AZIX Campus branding — centered */
+
+.auth-brand {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+.auth-brand-icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 15px;
+  border: 1px solid #dfe4ff;
+  border-radius: 16px;
+  color: #243b70;
+  background: #eef2ff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.07);
+}
+
+.auth-brand-name {
+  width: 100%;
+  color: #172554;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  text-align: center;
+}
+
+.auth-brand-name span {
+  color: #4f46e5;
+}
+
+.auth-brand > p {
+  margin: 8px 0 0;
+  color: #8793a9;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.35px;
+  text-align: center;
+}
+
+/* Login and register heading */
+
+.auth-heading {
+  margin-bottom: 26px;
+}
+
+.auth-card h1 {
+  margin: 0 0 9px;
+  color: #172554;
+  font-size: clamp(27px, 4vw, 32px);
+  font-weight: 800;
+  letter-spacing: -1.1px;
+  line-height: 1.25;
+}
+
+.auth-subtitle {
+  margin: 0 0 27px;
+  color: #71809a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Form */
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-card label {
+  margin-top: 7px;
+  color: #293957;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.auth-card input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 15px;
+  border: 1px solid #dce4f1;
+  border-radius: 11px;
+  outline: none;
+  color: #172554;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.auth-card input::placeholder {
+  color: #a0abc0;
+}
+
+.auth-card input:hover {
+  border-color: #c7d2e5;
+}
+
+.auth-card input:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* Primary button */
+
+.auth-button {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 17px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 11px;
+  color: #fff;
+  background: linear-gradient(110deg, #4338ca, #5b4cf0);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.19);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.auth-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: linear-gradient(110deg, #3730a3, #4f46e5);
+  box-shadow: 0 11px 23px rgba(79, 70, 229, 0.24);
+}
+
+.auth-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  box-shadow: none;
+}
+
+/* Register link */
+
+.auth-switch {
+  margin: 25px 0 0;
+  color: #71809a;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.auth-switch a {
+  color: #4f46e5;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  color: #3730a3;
+  text-decoration: underline;
+}
+
+/* Error and success messages */
+
+.auth-card [role="alert"],
+.auth-card [role="status"] {
+  margin: 0 0 12px;
+  padding: 11px 13px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.auth-card [role="alert"] {
+  border: 1px solid #fecaca;
+  color: #b91c1c !important;
+  background: #fef2f2;
+}
+
+.auth-card [role="status"] {
+  border: 1px solid #bbf7d0;
+  color: #15803d !important;
+  background: #f0fdf4;
+}
+
+/* Footer */
+
+.auth-footer {
+  margin-top: 25px;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f6;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* Responsive design */
+
+@media (max-width: 520px) {
+  .auth-page {
+    padding: 20px 14px;
+  }
+
+  .auth-card {
+    padding: 28px 23px;
+    border-radius: 19px;
+  }
+
+  .back-link {
+    margin-bottom: 23px;
+  }
+
+  .auth-brand {
+    margin-bottom: 24px;
+  }
+
+  .auth-brand-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .auth-brand-name {
+    font-size: 20px;
+  }
+
+  .auth-subtitle {
+    margin-bottom: 22px;
+  }
+
+  .auth-card input,
+  .auth-button {
+    min-height: 49px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-card {
+    animation: none;
+  }
+
+  .auth-card *,
+  .auth-page * {
+    transition: none !important;
+  }
+}

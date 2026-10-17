@@ -1,0 +1,608 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* ==========================================
+   AZIX CAMPUS — Premium Home Page
+   Navy Blue | White | Indigo
+========================================== */
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #172554;
+  background: #f8faff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Main page */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 80% 10%,
+      rgba(99, 102, 241, 0.08),
+      transparent 35%
+    ),
+    #f8faff;
+}
+
+/* Navigation bar */
+
+.navbar {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  min-height: 82px;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e8edf6;
+}
+
+/* AZIX Campus logo */
+
+.home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: #172554;
+  text-decoration: none;
+}
+
+.home-brand-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border: 1px solid #dfe4ff;
+  border-radius: 13px;
+  color: #243b70;
+  background: #eef2ff;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.home-brand:hover .home-brand-icon {
+  background: #e0e7ff;
+  transform: translateY(-1px);
+}
+
+.home-brand-text {
+  color: #172554;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  white-space: nowrap;
+}
+
+.home-brand-text span {
+  color: #4f46e5;
+}
+
+/* Navigation links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-links > a:not(.nav-button) {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links > a:not(.nav-button):hover {
+  color: #4f46e5;
+}
+
+/* Buttons */
+
+.nav-button,
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 45px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav-button,
+.primary-button {
+  color: #fff;
+  background: #4f46e5;
+  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.16);
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  color: #fff;
+  background: #4338ca;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.23);
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  color: #334155;
+  background: #fff;
+  border-color: #dbe3f0;
+}
+
+.secondary-button:hover {
+  color: #172554;
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* Home hero section */
+
+.hero {
+  width: min(1160px, 86%);
+  flex: 1;
+  margin: 0 auto;
+  padding: 88px 0 80px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: center;
+  gap: 76px;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+/* Eyebrow label */
+
+.tagline {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 23px;
+  padding: 9px 13px;
+  border: 1px solid #e0e7ff;
+  border-radius: 100px;
+  color: #4338ca;
+  background: #eef2ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* Main heading */
+
+.hero-content h1 {
+  margin: 0;
+  color: #172554;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2.7px;
+}
+
+.hero-content h1 span {
+  color: #4f46e5;
+}
+
+/* Description */
+
+.description {
+  max-width: 510px;
+  margin: 24px 0 30px;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Hero action buttons */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.hero-buttons .primary-button,
+.hero-buttons .secondary-button {
+  min-height: 51px;
+  padding: 0 23px;
+}
+
+/* Feature highlights */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 47px;
+  padding-top: 25px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.features > div {
+  min-width: 0;
+}
+
+.features h3 {
+  margin: 0 0 7px;
+  color: #172554;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.features p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Right-side portal card */
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid #e6eaf5;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow:
+    0 24px 70px rgba(30, 41, 91, 0.09),
+    0 3px 10px rgba(30, 41, 91, 0.03);
+}
+
+.hero-card::before {
+  position: absolute;
+  top: -85px;
+  right: -85px;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: #eef2ff;
+  content: "";
+  pointer-events: none;
+}
+
+/* Portal card heading */
+
+.card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-label {
+  margin: 0 0 9px;
+  color: #818cf8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.card-header h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 26px;
+  letter-spacing: -0.8px;
+}
+
+.icon-box {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 17px;
+  background: #eef2ff;
+  font-size: 27px;
+}
+
+/* Illustration */
+
+.student-illustration {
+  position: relative;
+  margin: 28px 0 24px;
+  padding: 42px 20px;
+  border: 1px solid #e8eaff;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8faff, #eef2ff);
+  text-align: center;
+}
+
+.illustration-circle {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 24px;
+  border: 8px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4338ca, #818cf8);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.2);
+  font-size: 45px;
+}
+
+.student-illustration h3 {
+  margin: 0 0 10px;
+  color: #172554;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.student-illustration p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Portal card footer */
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f7;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-dot {
+  color: #15803d;
+  font-weight: 700;
+}
+
+/* Page footer */
+
+.app > footer {
+  padding: 24px 6%;
+  border-top: 1px solid #e8edf6;
+  color: #64748b;
+  background: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Tablet layout */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .hero {
+    width: 90%;
+    padding: 65px 0;
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .hero-content {
+    max-width: 650px;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 17px 5%;
+  }
+
+  .home-brand {
+    gap: 9px;
+  }
+
+  .home-brand-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .home-brand-text {
+    font-size: 19px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px 16px;
+  }
+
+  .nav-links > a:not(.nav-button) {
+    font-size: 13px;
+  }
+
+  .nav-button,
+  .nav-links .secondary-button {
+    min-height: 40px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .hero {
+    width: 90%;
+    padding: 48px 0;
+    gap: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(38px, 10vw, 48px);
+    letter-spacing: -1.8px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-buttons .primary-button,
+  .hero-buttons .secondary-button {
+    width: 100%;
+  }
+
+  .features {
+    gap: 10px;
+    margin-top: 34px;
+  }
+
+  .features h3 {
+    font-size: 13px;
+  }
+
+  .features p {
+    font-size: 11px;
+  }
+
+  .hero-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .student-illustration {
+    padding: 32px 12px;
+  }
+
+  .illustration-circle {
+    width: 92px;
+    height: 92px;
+    font-size: 38px;
+  }
+
+  .student-illustration h3 {
+    font-size: 17px;
+  }
+
+  .card-header h2 {
+    font-size: 23px;
+  }
+}
+
+/* Small mobile screens */
+
+@media (max-width: 360px) {
+  .home-brand-text {
+    font-size: 17px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
